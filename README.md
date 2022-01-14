@@ -1,1 +1,1 @@
-# js_practice
+# JavaScript Practice
