@@ -17,12 +17,19 @@ GOOD LUCK 😀
 
 //! Solution Coding Challenge 1
 
+console.log(' ');
 console.log("Solution of Coding Challenge 1 Starting...");
+console.log(' ');
 
-const massMark = 95;
-const massJohn = 85;
-const heightMark = 1.88;
-const heightJohn = 1.76;
+const massMark = 78;
+const massJohn = 92;
+const heightMark = 1.69;
+const heightJohn = 1.95;
+
+// const massMark = 95;
+// const massJohn = 85;
+// const heightMark = 1.88;
+// const heightJohn = 1.76;
 
 let markBMI = massMark / (heightMark * heightMark);
 let johnBMI = massJohn / (heightJohn * heightJohn);
@@ -33,7 +40,9 @@ let markHigherBMI = markBMI > johnBMI;
 
 console.log(markHigherBMI);
 
+console.log(' ');
 console.log("Solution of Coding Challenge 1 Ended...");
+console.log(' ');
 
 ////////////////////////////////////
 // Coding Challenge #2
@@ -48,6 +57,24 @@ HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
 */
+
+//! Solution Coding Challenge 2
+
+
+console.log(' ');
+console.log("Solution of Coding Challenge 2 Starting...");
+console.log(' ');
+
+if(markHigherBMI){
+    console.log(`Mark's BMI (${markBMI}) is higher than John's BMI (${johnBMI}) by (${markBMI - johnBMI}).`);
+}
+else{
+    console.log(`John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI}) by (${johnBMI - markBMI}).`);
+}
+
+console.log(' ');
+console.log("Solution of Coding Challenge 2 Ended...");
+console.log(' ');
 
 ////////////////////////////////////
 // Coding Challenge #3
