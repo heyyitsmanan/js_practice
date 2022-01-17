@@ -83,6 +83,84 @@ GOOD LUCK 😀
 */
 
 
+//! Solution Coding Challenge 2
+
+console.log(' ');
+console.log("Solution of Coding Challenge 2 Starting...");
+console.log(' ');
+
+const calcTip = bill => ((bill >= 50) && (bill <= 300)) ? (0.15 * bill) : (0.2 * bill);
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+console.log(tips);
+
+const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[2] + tips[2])];
+
+console.log(total);
+
+console.log(' ');
+console.log("Solution of Coding Challenge 2 Ended...");
+console.log(' ');
+
+/////////////////////////////////
+
+// Small Challenge 1
+
+/* Make an object and try to access all the elements in the object dynamically and make a sentence using object properties. */
+
+//! Solution Coding Challenge (Small Challenge 1)
+
+console.log(' ');
+console.log("Solution of Coding Challenge (Small Challenge 1) Starting...");
+console.log(' ');
+
+const manan = {
+  firstName: 'Manan',
+  lastName: 'Ahuja',
+  age: 2022 - 1998,
+  job: 'Cloud Engineer',
+  company: 'Nokia',
+  friends: ['C++', 'JavaScript', 'DSA'],
+  hasDriversLicense: true,
+  summary: function() {
+    const theSummary = `Hi, My name is ${this.firstName} ${this.lastName} and I am a ${this.age} years old ${this.job} who is working in ${this.company} and having knowledge of ${this.friends[0]}, ${this.friends[1]}, and ${this.friends[2]}. He is ${(this.hasDriversLicense) ? ('having') : ('not having')} a drivers license.`;
+    this.mySummary = theSummary;
+    return theSummary;
+  }
+};
+
+const string = `${manan.firstName} ${manan.lastName} has ${manan.friends.length} friends, and his best friend is ${manan.friends[manan.friends.length - 1]}.`;
+
+console.log(string);
+
+console.log(' ');
+console.log("Solution of Coding Challenge (Small Challenge 1) Ended...");
+console.log(' ');
+
+/////////////////////////////////
+
+// Small Challenge 2
+
+/* Analyze a summary of whole object using a method in which you'll be adding the summary as a property of the object. */
+
+//! Solution Coding Challenge (Small Challenge 2)
+
+console.log(' ');
+console.log("Solution of Coding Challenge (Small Challenge 2) Starting...");
+console.log(' ');
+
+//? Using the object manan which I declared before for Small Challenge 1
+
+console.log(manan.summary());
+
+// console.log(manan);
+
+console.log(' ');
+console.log("Solution of Coding Challenge (Small Challenge 2) Ended...");
+console.log(' ');
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -99,6 +177,48 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
+
+//! Solution of Coding Challenge 3
+
+console.log(' ');
+console.log("Solution of Coding Challenge 3 Starting...");
+console.log(' ');
+
+const john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function(){
+    this.myBMI = this.mass / (this.height * this.height);
+    return this.myBMI;
+  }
+};
+
+const mark = {
+  firstName: 'Mark',
+  lastName: 'Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function(){
+    this.myBMI = this.mass / (this.height * this.height);
+    return this.myBMI;
+  }
+};
+
+console.log(john.calcBMI());
+console.log(mark.calcBMI());
+
+if(john.myBMI > mark.myBMI){
+  console.log(`${john.firstName} ${john.lastName}'s BMI (${john.myBMI}) is greater than ${mark.firstName} ${mark.lastName}'s BMI (${mark.myBMI}).`);
+}
+else{
+  console.log(`${mark.firstName} ${mark.lastName}'s BMI (${mark.myBMI}) is greater than ${john.firstName} ${john.lastName}'s BMI (${john.myBMI}).`);
+}
+
+console.log(' ');
+console.log("Solution of Coding Challenge 3 Ended...");
+console.log(' ');
 
 
 ///////////////////////////////////////
