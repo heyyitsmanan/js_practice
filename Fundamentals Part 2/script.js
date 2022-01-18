@@ -242,3 +242,46 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 
 GOOD LUCK 😀
 */
+
+//! Solution Coding Challenge 4
+
+console.log(' ');
+console.log("Solution of Coding Challenge 4 Starting...");
+console.log(' ');
+
+const bills_4 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips_4 = [], totals_4 = [];
+
+const calcTip_4 = bill => ((bill >= 50) && (bill <= 300)) ? (bill * 0.15) : (bill * 0.2);
+
+for(let i = 0; i < bills_4.length; i++) {
+  tips_4.push(calcTip(bills_4[i]));
+  totals_4.push(tips_4[i] + bills_4[i]);
+}
+
+console.log(totals_4);
+
+console.log(' ');
+console.log('------  BONUS QUESTION  ------');
+console.log(' ');
+
+const arr = [];
+
+for(let k = 5; k <= 10; k++) {
+  arr.push(k);
+}
+
+const calcAverage = function(theArray) {
+  let avg = 0;
+  for(let i = 0; i < theArray.length; i++) {
+    avg += theArray[i];
+  }
+  avg /= theArray.length;
+  console.log(`Average of ${theArray} is ${avg}`);
+}
+
+calcAverage(arr);
+
+console.log(' ');
+console.log("Solution of Coding Challenge 4 Ended...");
+console.log(' ');
