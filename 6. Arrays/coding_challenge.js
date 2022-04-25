@@ -111,3 +111,42 @@ dogsHumanAges(dogsAge2);
 console.log(" ");
 console.log("Solution of Coding Challenge 2 Ended...");
 console.log(" ");
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+Rewrite the 'calcAverageHumanAge' function from the previous challenge, but this time as an arrow function, and using chaining!
+
+TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
+TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
+
+GOOD LUCK 😀
+*/
+
+//! Solution Coding Challenge 1
+
+console.log(" ");
+console.log("Solution of Coding Challenge 3 Starting...");
+console.log(" ");
+
+//* Test Data 1
+
+const humanAverage1 = [5, 2, 4, 1, 15, 8, 3];
+
+//* Test Data 2
+
+const humanAverage2 = [16, 6, 10, 5, 6, 1, 4];
+
+//? Solution of 1st question
+
+const calcHumanAverage = function (ages) {
+  return ages.reduce((acc, age) => acc + age, 0) / ages.length;
+};
+
+console.log(calcHumanAverage(humanAverage1));
+console.log(calcHumanAverage(humanAverage2));
+
+console.log(" ");
+console.log("Solution of Coding Challenge 3 Ended...");
+console.log(" ");
