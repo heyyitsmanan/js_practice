@@ -82,6 +82,16 @@ const displayTransactions = function (transactions) {
 
 displayTransactions(account1.movements);
 
+//* Display Total Overall Balance
+
+const calcDisplayTotalBalance = function (movements) {
+  const balance = movements.reduce((acc, current) => acc + current, 0);
+  console.log(balance);
+  labelBalance.textContent = `Rs. ${balance}`;
+};
+
+calcDisplayTotalBalance(account1.movements);
+
 //* Computing Usernames
 
 const createUsernames = function (accs) {
