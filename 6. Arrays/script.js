@@ -65,9 +65,10 @@ inputLoginUsername.focus();
 
 //* Display Transaction Information
 
-const displayTransactions = function (transactions) {
+const displayTransactions = function (transactions, sort = false) {
   containerMovements.innerHTML = "";
-  transactions.forEach(function (trans, i) {
+  const movs = sort ? transactions.slice().sort((a, b) => a - b) : transactions;
+  movs.forEach(function (trans, i) {
     const type = trans > 0 ? "deposit" : "withdrawal";
     const theHtml = `
         <div class="movements__row">
@@ -212,16 +213,12 @@ btnClose.addEventListener("click", function (e) {
   inputCloseUsername.value = inputClosePin.value = "";
 });
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
+// Sorting Methods
 
-const currencies = new Map([
-  ["USD", "United States dollar"],
-  ["EUR", "Euro"],
-  ["GBP", "Pound sterling"],
-]);
+let sortedStatus = false;
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
-/////////////////////////////////////////////////
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
+  displayTransactions(currentAccount.movements, !sortedStatus);
+  sortedStatus = !sortedStatus;
+});
