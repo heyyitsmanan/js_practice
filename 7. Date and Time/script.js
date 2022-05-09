@@ -99,7 +99,7 @@ const formatCurrency = function (value, locale, currency) {
 
 //* Display Transaction Information
 
-const displayTransactions = function (acc, sort = false) {
+const displayTransactions = function (acc, sort) {
   containerMovements.innerHTML = "";
   const movs = sort
     ? acc.movements.slice().sort((a, b) => a - b)
@@ -323,6 +323,6 @@ let sortedStatus = false;
 
 btnSort.addEventListener("click", function (e) {
   e.preventDefault();
-  displayTransactions(currentAccount.movements, !sortedStatus);
+  displayTransactions(currentAccount, !sortedStatus);
   sortedStatus = !sortedStatus;
 });
